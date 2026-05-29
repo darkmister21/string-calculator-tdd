@@ -29,4 +29,10 @@ class StringCalculatorTest {
     void newLinesBetweenNumbersReturnSum() {
         assertEquals(6, calculator.add("1\n2,3"));
     }
+
+    @Test
+    void customDelimiterReturnsSum() {
+        assertEquals(3, calculator.add("//;\n1;2"));
+        assertEquals(6, calculator.add("//-\n1-2-3"));
+    }
 }
