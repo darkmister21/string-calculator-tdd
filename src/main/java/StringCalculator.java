@@ -3,10 +3,12 @@ public class StringCalculator {
         if (numbers.isEmpty()) {
             return 0;
         }
-        if (numbers.contains(",")) {
-            String[] parts = numbers.split(",");
-            return Integer.parseInt(parts[0]) + Integer.parseInt(parts[1]);
+
+        String[] tokens = numbers.split(",");
+        int sum = 0;
+        for (String token : tokens) {
+            sum += Integer.parseInt(token);
         }
-        return Integer.parseInt(numbers);
+        return sum;
     }
 }
