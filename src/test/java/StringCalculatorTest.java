@@ -1,0 +1,22 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class StringCalculatorTest {
+    private final StringCalculator calculator = new StringCalculator();
+
+    @Test
+    void emptyStringReturnsZero() {
+        assertEquals(0, calculator.add(""));
+    }
+
+    @Test
+    void singleNumberReturnsItself() {
+        assertEquals(1, calculator.add("1"));
+        assertEquals(5, calculator.add("5"));
+    }
+
+    @Test
+    void twoNumbersCommaSeparatedReturnSum() {
+        assertEquals(3, calculator.add("1,2"));
+    }
+}
