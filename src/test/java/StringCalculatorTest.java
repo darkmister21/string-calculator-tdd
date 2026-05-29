@@ -19,4 +19,9 @@ class StringCalculatorTest {
     void twoNumbersCommaSeparatedReturnSum() {
         assertEquals(3, calculator.add("1,2"));
     }
+
+    @Test
+    void multipleNumbersCommaSeparatedReturnSum() {
+        assertEquals(15, calculator.add("1,2,3,4,5"));
+    }
 }
